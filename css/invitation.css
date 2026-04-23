@@ -1,0 +1,1144 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f7f3;
+  /* Fallback for browsers that don't support background-blend-mode */
+}
+
+/* Cross-browser safe background pattern overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity: 0.15;
+  mix-blend-mode: multiply; */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content appears above overlay */
+body > * {
+  position: relative;
+  z-index: 2;
+}
+.elegant-header {
+  position: relative;
+  /* Use min-height instead of vh for mobile compatibility */
+  min-height: 400px;
+  height: 60vh;
+  /* Fallback background color for older browsers */
+  background-color: #545c4a;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 7px 36px 0 rgba(48, 52, 41, 0.22); */
+}
+/* Cross-browser safe texture overlay using pseudo-element */
+.elegant-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url('https://www.transparenttextures.com/patterns/arabesque.png');
+  opacity: 0.18; */
+  mix-blend-mode: overlay;
+  z-index: 1;
+  /* Ensure overlay works consistently across browsers */
+  -webkit-mix-blend-mode: overlay;
+  mix-blend-mode: overlay;
+}
+/* Cross-browser safe vignette overlay */
+.elegant-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  opacity: 0.1;
+}
+/* Half-circle arc at bottom */
+.curved-arc {
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transform: translateX(-50%);
+  width: 125%;
+  height: 60%;
+  z-index: 3;
+  pointer-events: none;
+}
+.monogram-img {
+  position: relative;
+  z-index: 4;
+  display: block;
+  margin: 0 auto;
+  max-width: 320px;
+  width: 60vw;
+  height: auto;
+  /* box-shadow: 0 8px 32px 0 rgba(44,51,33,0.33); */
+  /* filter: drop-shadow(0 9px 24px rgba(49,61,47,0.16)); */
+  margin-top: -200px;
+}
+/* Centered monogram */
+/* .monogram {
+  position: relative;
+  z-index: 4;
+  color: #d9ddcb;
+  font-family: "Cinzel", serif;
+  font-size: 5vw;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  filter: drop-shadow(0 3px 12px rgba(44,51,33,0.13));
+  text-shadow:
+    2px 3px 6px #464B32,
+    0 0 6px #fff3,
+    0 2px 2px #b6b6b609,
+    0 1px 0 #fff3;
+} */
+@media (max-width: 500px) {
+  .elegant-header {
+    min-height: 250px;
+  }
+  .monogram {
+    font-size: 11vw;
+  }
+}
+.ballet-font {
+  font-family: "Kapakana", cursive;
+  font-weight: 400;
+  font-size: 70px;
+  font-style: normal;
+        /* font-family: 'Dancing Script', cursive;
+        font-size: 2.2em;
+        letter-spacing: 0.04em;
+        color: #545c4a;
+        font-weight: 700;
+        font-size: 50px; */
+}
+
+.first-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #f8f7f3;
+  /* background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); */
+  /* opacity: 0.15; */
+  /* background-blend-mode: multiply; */
+  color: #545c4a;
+}
+.first-section p {
+  font-size: 1.5em;
+  letter-spacing: 5px;
+}
+
+/* Elegant Footer - Upside down version of header */
+.elegant-footer {
+  position: relative;
+  /* Use min-height for mobile compatibility */
+  min-height: 400px;
+  height: 60vh;
+  /* Fallback background color for older browsers */
+  background-color: #545c4a;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cross-browser safe texture overlay */
+.elegant-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  z-index: 1;
+  -webkit-mix-blend-mode: overlay;
+  mix-blend-mode: overlay;
+}
+
+/* Cross-browser safe soft light overlay */
+.elegant-footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #545c4a;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.elegant-footer p {
+  color: white;
+}
+
+.elegant-footer .arabic {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  width: auto;
+  height: auto;
+  z-index: 4;
+  padding-top: 50px;
+}
+
+/* Half-circle arc at top (upside down) */
+.curved-arc-footer {
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  transform: translateX(-50%);
+  width: 125%;
+  height: 60%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.monogram-img-footer {
+  position: relative;
+  z-index: 4;
+  display: block;
+  margin: 0 auto;
+  max-width: 320px;
+  width: 60vw;
+  height: auto;
+  margin-bottom: -200px;
+}
+
+@media (max-width: 500px) {
+  .elegant-footer {
+    min-height: 250px;
+  }
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 150px;
+  /* Fallback background color for older browsers */
+  background-color: #545c4a;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+.fancy {
+  font-family: "Kapakana", cursive;
+  font-weight: 400;
+  font-size: 80px;
+  font-style: normal;
+  padding-bottom: 20px;
+  /* font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  letter-spacing: 1px; */
+
+}
+
+.first-second {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 0px;
+  padding-bottom: 0;
+  font-size: 0.8em;
+  font-family: 'Cinzel', serif;
+  color: white;
+  z-index: 4;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0px;
+}
+.parents {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  padding: px 0;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Padding for second section text elements */
+/* .second-section .text {
+  padding: 30px 0;
+} */
+
+.parents p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.first-second p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.arabic {
+  font-family: 'Amiri Quran', serif;
+}
+.text {
+  
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 12px;
+}
+.dpn {
+  padding-top: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 0px;
+}
+.male-groom h1{
+  margin-top: -1px;
+  margin-bottom: -50px;
+  
+}
+.male-groom {
+  /* padding-top: 10px; */
+  padding-bottom: 40px;
+}
+.third-section {
+  position: relative;
+  /* Ensure background color renders consistently */
+  background-color: #f8f7f3;
+  color: #535b4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 120px 20px;
+  text-align: center;
+}
+
+/* Cross-browser safe pattern overlay for third section */
+.third-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Ensure content appears above overlay */
+.third-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.third-section .corner-decoration {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  /* opacity: 0.6; */
+  z-index: 1;
+}
+
+.third-section .corner-decoration.top-left {
+  top: 0;
+  left: 0;
+}
+
+.third-section .corner-decoration.top-right {
+  top: 0;
+  right: 0;
+}
+
+.third-section .corner-decoration.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.third-section .corner-decoration.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.maklumat-header {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.maklumat-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin: 0 0 10px 0;
+  color: #535b4a;
+}
+
+.majlis-title {
+  font-family: "Kapakana", cursive;
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0;
+  color: #535b4a;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+.divider-line {
+  width: 200px;
+  height: 1px;
+  background: #535b4a;
+  margin: 20px auto;
+  position: relative;
+}
+
+.divider-line::before {
+  content: "❦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f8f7f3;
+  /* background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); */
+  /* background-blend-mode: multiply; */
+  padding: 0 15px;
+  font-size: 1.2em;
+  color: #535b4a;
+}
+
+.event-details {
+  position: relative;
+  margin: 30px auto 0 auto;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.event-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.event-table tr {
+  height: 25px;
+}
+
+.event-label {
+  text-align: right;
+  padding-right: 1px;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 3px;
+}
+
+.event-colon {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.event-value {
+  text-align: left;
+  padding-left: 1px;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 3px;
+}
+
+.building-container {
+  position: relative;
+  margin: 40px 0 30px 0;
+  z-index: 2;
+}
+
+.building-img {
+  min-width: 250px;
+  max-width: none;
+  width: 250px;
+  height: auto;
+  filter: grayscale(20%);
+}
+
+.location-info {
+  position: relative;
+  font-family: 'Cinzel', serif;
+  font-size: 0.95em;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.location-info p {
+  margin: 5px 0;
+}
+
+.lokasi-button {
+  position: relative;
+  background: #545c4a;
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85em;
+  letter-spacing: 3px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(84, 92, 74, 0.3);
+  z-index: 2;
+}
+
+.lokasi-button:hover {
+  background: #464d3f;
+  box-shadow: 0 6px 20px rgba(84, 92, 74, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .majlis-title {
+    font-size: 3em;
+  }
+  .maklumat-title {
+    font-size: 2em;
+    letter-spacing: 10px;
+    font-weight: 500;
+  }
+  .event-details {
+    font-size: 0.85em;
+  }
+  .building-img {
+    max-width: 250px;
+  }
+}
+
+/* Fourth Section - Aturcara Majlis */
+.fourth-section {
+  /* Fallback background color for older browsers */
+  background-color: #545c4a;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 100px 20px;
+  text-align: center;
+}
+
+.aturcara-header {
+  margin-bottom: 60px;
+}
+
+.aturcara-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin: 0 0 10px 0;
+  color: #d9ddcb;
+}
+
+.aturcara-subtitle {
+  font-family: "Kapakana", cursive;
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0;
+  color: #d9ddcb;
+  margin-top: -30px;
+}
+
+.aturcara-divider {
+  width: 200px;
+  height: 1px;
+  background: #d9ddcb;
+  margin: 25px auto;
+  position: relative;
+}
+
+.aturcara-divider::before {
+  content: "❦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  padding: 0 15px;
+  font-size: 1.2em;
+  color: #d9ddcb;
+}
+
+.schedule-list {
+  max-width: 600px;
+  width: 100%;
+}
+
+.schedule-item {
+  margin-bottom: 45px;
+  line-height: 1.4;
+}
+
+.schedule-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 0;
+  color: white;
+}
+
+.schedule-time {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 8px 0 0 0;
+  color: #d9ddcb;
+}
+
+/* Fifth Section - Contact Information */
+.fifth-section {
+  position: relative;
+  /* Ensure background color renders consistently */
+  background-color: #eae6df;
+  color: #535b4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 100px 40px;
+  min-height: 600px;
+  /* Add overflow containment */
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cross-browser safe pattern overlay for fifth section */
+.fifth-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Ensure content appears above overlay */
+.fifth-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-vertical-text {
+  position: relative !important;
+  flex-shrink: 0;
+  transform: rotate(-90deg) !important;
+  font-family: "Kapakana", cursive !important;
+  font-size: 180px !important;
+  color: #545c4a !important;
+  white-space: nowrap !important;
+  font-weight: 400 !important;
+}
+
+.contact-container {
+  max-width: 550px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  text-align: center;
+  /* Ensure container stays within section */
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.contact-group {
+  text-align: center;
+  /* Ensure group stays within container */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-group-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 0 0 25px 0;
+  color: #535b4a;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.contact-button {
+  background: #5a6350;
+  color: white;
+  border: none;
+  padding: 15px 45px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75em;
+  letter-spacing: 1.5px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(84, 92, 74, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 300px;
+  font-weight: 400;
+}
+
+.contact-button:hover {
+  background: #4d5545;
+  box-shadow: 0 5px 18px rgba(84, 92, 74, 0.35);
+  transform: translateY(-2px);
+}
+
+
+
+@media (max-width: 500px) {
+  .fifth-section {
+    position: relative;
+    /* Ensure background color renders consistently on mobile */
+    background-color: #eae6df;
+    color: #535b4a;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 100px 80px 100px 200px;
+    min-height: 650px;
+    /* Add overflow containment for mobile */
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .fifth-section::before {
+    /* Ensure pattern overlay works on mobile */
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    -webkit-mix-blend-mode: multiply;
+  }
+  
+  .contact-vertical-text {
+    position: absolute !important;
+    left: 80px !important;
+    top: 50% !important;
+    transform: translateY(-50%) translateX(-50%) rotate(-90deg) !important;
+    font-family: "Kapakana", cursive !important;
+    font-size: 180px !important;
+    color: #545c4a !important;
+    
+    white-space: nowrap !important;
+    font-weight: 400 !important;
+    z-index: 1 !important;
+  }
+  
+  .contact-container {
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 0px;
+    /* Ensure container stays within section on mobile */
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  
+  .contact-group {
+    text-align: center;
+    /* Ensure group stays within container on mobile */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contact-group-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 0 25px 0;
+    color: #535b4a;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .contact-button {
+    background: #5a6350;
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75em;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(84, 92, 74, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 300px;
+    font-weight: 400;
+  }
+  
+  .contact-button:hover {
+    background: #4d5545;
+    box-shadow: 0 5px 18px rgba(84, 92, 74, 0.35);
+    transform: translateY(-2px);
+  }
+
+}
+
+/* Sixth Section - Countdown Timer */
+.sixth-section {
+  position: relative;
+  /* Background handled by inline style in HTML */
+  color: #d9ddcb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px;
+  min-height: 400px;
+  text-align: center;
+}
+
+/* Pseudo-element overlay removed to allow inline background image */
+
+/* Ensure content appears above background */
+.sixth-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.double-oval-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  z-index: 1;
+  color: #d9ddcb;
+}
+
+.double-oval-frame svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.countdown-title {
+  position: relative;
+  font-family: "Kapakana", cursive !important;
+  font-size: 80px !important;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  color: #d9ddcb;
+  z-index: 2;
+}
+
+.countdown-display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-family: 'Cinzel', serif;
+  font-size: 3em;
+  font-weight: 400;
+  color: #d9ddcb;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.countdown-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #d9ddcb;
+}
+
+.countdown-separator {
+  font-family: 'Cinzel', serif;
+  font-size: 3em;
+  color: #d9ddcb;
+  margin: 0 5px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 500px) {
+  .countdown-title {
+    font-size: 3em;
+  }
+  .countdown-value {
+    font-size: 2em;
+  }
+  .countdown-label {
+    font-size: 0.75em;
+  }
+  .countdown-separator {
+    font-size: 2em;
+  }
+}
+
+/* Seventh Section - Doa/Prayer */
+.seventh-section {
+  background: #f8f7f3;
+  /* background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-blend-mode: multiply; */
+  color: #535b4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 40px 0px 40px;
+  min-height: 600px;
+  text-align: center;
+}
+
+.doa-arabic {
+  font-family: 'Amiri Quran', serif;
+  font-size: 2em;
+  color: #535b4a;
+  margin-bottom: 60px;
+  direction: rtl;
+  line-height: 1.8;
+}
+
+.doa-arabic img {
+  max-width: 300px;
+  width: auto;
+  height: auto;
+}
+
+.doa-content {
+  max-width: 700px;
+  width: 100%;
+}
+
+.doa-content p {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin: 5px 0;
+  color: #535b4a;
+}
+
+.doa-spacing {
+  margin-top: 30px !important;
+}
+
+.doa-amin {
+  margin-top: 40px !important;
+  font-weight: 400 !important;
+  letter-spacing: 4px !important;
+}
+
+@media (max-width: 500px) {
+  .doa-arabic {
+    font-size: 2em;
+  }
+  .doa-content p {
+    font-size: 0.95em;
+    letter-spacing: 4px;
+  }
+}
+
+/* Elegant Footer - Upside down version of header */
+.footer {
+  position: relative;
+  /* Use min-height for mobile compatibility */
+  min-height: 400px;
+  height: 60vh;
+  /* Fallback background color for older browsers */
+  background-color: #545c4a;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cross-browser safe texture overlay - same as header */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url('https://www.transparenttextures.com/patterns/arabesque.png');
+  opacity: 0.18; */
+  mix-blend-mode: overlay;
+  z-index: 1;
+  -webkit-mix-blend-mode: overlay;
+  mix-blend-mode: overlay;
+}
+
+/* Cross-browser safe vignette overlay - same as header */
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Images/greenbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  opacity: 0.1;
+}
+
+/* Half-circle arc at top (upside down) - same as header but inverted */
+.arc-wrapper {
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  transform: translateX(-50%);
+  width: 125%;
+  height: 60%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.footer p {
+  color: white;
+}
+
+.footer .arabic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.2em;
+  font-family: 'Amiri Quran', serif;
+  direction: rtl;
+  text-align: center;
+  color: white;
+  width: 100%;
+  z-index: 4;
+  padding-top: 100px;
+}
+
+/* Half-circle arc at top (upside down) */
+.arc-footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}

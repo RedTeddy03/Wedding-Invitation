@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <!-- Google Fonts for elegant monogram effect -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Amiri+Quran&family=Cinzel:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/invitation.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoN6VZH1GqGAE6e3hZrsM2n5F1W1Vb4Mw6pGi1GqetQ8K41" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Background Music -->
+  <audio id="bgm" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    document.addEventListener("touchstart", function () {
+      const audio = document.getElementById("bgm");
+      audio.play();
+    }, { once: true });
+  </script>
+  <style>
+    .kapakana-regular {
+      font-family: "Kapakana", cursive;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @media (max-width: 500px) {
+      .sixth-section {
+        padding: 30px 15px !important;
+        min-height: 200px !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .double-oval-frame {
+        width: 95% !important;
+      }
+      .countdown-display {
+        gap: 5px !important;
+      }
+      .countdown-title {
+        font-size: 2.5em !important;
+        margin-bottom: 5px !important;
+      }
+      .countdown-value {
+        font-size: 1.8em !important;
+        margin-bottom: 5px !important;
+      }
+      .countdown-label {
+        font-size: 0.65em !important;
+      }
+      .countdown-separator {
+        font-size: 1.8em !important;
+        margin-bottom: 30px !important;
+      }
+      .fifth-section {
+        padding: 60px 20px !important;
+        min-height: 500px !important;
+        gap: 40px !important;
+      }
+      .contact-vertical-text {
+        font-size: 120px !important;
+      }
+      .contact-container {
+        gap: 40px !important;
+      }
+      .contact-button {
+        min-width: 250px !important;
+        padding: 12px 30px !important;
+        font-size: 0.7em !important;
+      }
+      .first-section {
+        padding: 20px 15px !important;
+      }
+      .first-section p {
+        font-size: 1.2em !important;
+        letter-spacing: 3px !important;
+      }
+      .ballet-font {
+        font-size: 60px !important;
+      }
+      .elegant-header {
+        min-height: 250px !important;
+      }
+      .monogram-img {
+        margin-top: -150px !important;
+        max-width: 220px !important;
+      }
+      .elegant-footer {
+        min-height: 250px !important;
+      }
+      .arabic {
+        padding-top: 150px !important;
+        max-width: 200px !important;
+      }
+      .second-section {
+        padding-bottom: 80px !important;
+      }
+      .fancy {
+        font-size: 60px !important;
+        padding-bottom: 15px;
+      }
+      .third-section {
+        padding: 60px 15px 80px 15px !important;
+      }
+      .third-section .corner-decoration {
+        width: 150px !important;
+      }
+      .maklumat-title {
+        font-size: 1.5em !important;
+        letter-spacing: 5px !important;
+      }
+      .majlis-title {
+        font-size: 2.5em !important;
+        margin-top: -20px !important;
+        margin-bottom: 30px !important;
+      }
+      .building-img {
+        width: 200px !important;
+      }
+      .fourth-section {
+        padding: 60px 15px 80px 15px !important;
+      }
+      .aturcara-title {
+        font-size: 1.5em !important;
+        letter-spacing: 5px !important;
+      }
+      .aturcara-subtitle {
+        font-size: 2.5em !important;
+        margin-top: -20px !important;
+      }
+      .schedule-item {
+        margin-bottom: 30px !important;
+      }
+      .seventh-section {
+        padding: 80px 15px 0px 15px !important;
+        min-height: 400px !important;
+      }
+      .doa-arabic img {
+        max-width: 200px !important;
+      }
+      .doa-content p {
+        font-size: 0.85em !important;
+        letter-spacing: 2px !important;
+      }
+      .footer {
+        min-height: 200px !important;
+      }
+      .monogram-img-footer {
+        margin-bottom: -150px !important;
+        max-width: 220px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="elegant-header">
+   
+    <img src="Images/InvitationLetter.png" alt="Monogram" class="monogram-img">
+    <svg class="curved-arc" viewBox="0 0 1200 420" preserveAspectRatio="none">
+      <defs>
+        <pattern id="texturePattern" patternUnits="userSpaceOnUse" width="200" height="200">
+          <rect width="200" height="200" fill="#f8f7f3"/>
+          <!-- <image href="https://www.transparenttextures.com/patterns/paper-fibers.png" x="0" y="0" width="200" height="200" opacity="1" style="mix-blend-mode: multiply;"/> -->
+        </pattern>
+      </defs>
+      <path d="M0 0 Q600 420 1200 0 V420 H0 Z" fill="url(#texturePattern)"/>
+    </svg>
+  </header>
+
+  <div style="background-color: #f8f7f3;" class="first-section">
+    <p>W A L I M A T U L U R U S</p>
+    <h1 class="ballet-font">Amirul & Fatini</h1>
+    <P>18 JULAI 2026, SABTU</P>
+  </div>
+
+  <div class="elegant-footer">
+    <svg class="curved-arc-footer" viewBox="0 0 1200 420" preserveAspectRatio="none">
+      <defs>
+        <pattern id="texturePattern" patternUnits="userSpaceOnUse" width="200" height="200">
+          <rect width="200" height="200" fill="#f8f7f3"/>
+          <!-- <image href="https://www.transparenttextures.com/patterns/paper-fibers.png" x="0" y="0" width="200" height="200" opacity="1" style="mix-blend-mode: multiply;"/> -->
+        </pattern>
+      </defs>
+      <path d="M0 420 Q600 0 1200 420 V0 H0 Z" fill="url(#texturePattern)"/>
+    </svg>
+    <img src="Images/assalamualaikum.png" alt="Assalamualaikum" class="arabic">
+    <section class="first-second">
+      <p>ZAINOL ALAM BIN MOHAMED</p> 
+      <p>NOORLIZA BINTI MOHAMAD</p>
+    </section>
+  </div>
+
+  <div class="second-section">
+
+    <P class="text" style="padding-top: 0px; padding-bottom: 0px;">Dengan segala hormatnya, kami menjemput</P>
+    <P class="text" style="padding-top: 0px; padding-bottom: 0px;">Dato/Datin/Tuan/Puan/Encik/Cik</P>
+    <P class="text" style="padding-top: 0px; padding-bottom: 30px;">ke majlis perkahwinan puteri kami</P>
+    
+    <H1 class="fancy" style="margin-bottom: 0; margin-top: 30px;padding-bottom: 0;">Fatin Nur Fatini</H1>
+    <section class="parents">
+        <p style="margin-bottom: 0; margin-top: 0px;">BINTI ZAINOL ALAM</p>
+    </section>
+    <p class="text" style="padding-top: 20px; padding-bottom: 20px;">dengan pasangannya</p>
+
+    <section class="male-groom">
+        <h1 class="fancy" style="padding-bottom: 35px;">Mohd</h1>
+        <h1 class="fancy">Amirul Firdaous</h1>
+        <section class="parents">
+          <p style="padding-top: 35px;">BIN MOHD AZLIN</p>
+        </section>
+    </section>
+    
+  </div>
+
+  <div class="third-section">
+    <img src="Images/new border - top left.png" alt="Corner Decoration" class="corner-decoration top-left">
+    <img src="Images/new border - top right.png" alt="Corner Decoration" class="corner-decoration top-right">
+    <img src="Images/new border - bottom left.png" alt="Corner Decoration" class="corner-decoration bottom-left">
+    <img src="Images/new border - bottom right.png" alt="Corner Decoration" class="corner-decoration bottom-right">
+    
+    <div class="maklumat-header">
+      <h2 class="maklumat-title">MAKLUMAT</h2>
+      <h1 class="majlis-title">Majlis</h1>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="event-details">
+      <table class="event-table">
+        <tr>
+          <td class="event-label">HARI</td>
+          <td class="event-colon">:</td>
+          <td class="event-value">SABTU</td>
+        </tr>
+        <tr>
+          <td class="event-label">TARIKH</td>
+          <td class="event-colon">:</td>
+          <td class="event-value">18 JULAI 2026</td>
+        </tr>
+        <tr>
+          <td class="event-label">MASA</td>
+          <td class="event-colon">:</td>
+          <td class="event-value">11.00 PAGI - 4.00 PETANG</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="building-container">
+      <img src="Images/building.png" alt="Royal Gallery Tuanku Ja'afar" class="building-img">
+    </div>
+
+    <div class="location-info">
+      <p>ROYAL GALLERY TUANKU JAA'FAR</p>
+      <p>SEREMBAN</p>
+    </div>
+
+    <button class="lokasi-button" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Royal+Gallery+Tuanku+Ja%27afar')">LIHAT LOKASI</button>
+  </div>
+
+  <div class="fourth-section">
+    <div class="aturcara-header">
+      <h1 class="aturcara-title">Aturcara</h1>
+      <h2 class="aturcara-subtitle">Majlis</h2>
+      <div class="aturcara-divider"></div>
+    </div>
+
+    <div class="schedule-list">
+      <div class="schedule-item">
+        <p class="schedule-title">KETIBAAN TETAMU</p>
+        <p class="schedule-time">11.00 PAGI</p>
+      </div>
+
+      <div class="schedule-item">
+        <p class="schedule-title">KETIBAAN PENGANTIN</p>
+        <p class="schedule-time">12.00 TENGAHARI</p>
+      </div>
+
+      <div class="schedule-item">
+        <p class="schedule-title">BACAAN DOA</p>
+        <p class="schedule-title">&amp; PERSANDINGAN</p>
+        <p class="schedule-time">12.40 TENGAHARI</p>
+      </div>
+
+      <div class="schedule-item">
+        <p class="schedule-title">ACARA POTONG KEK &amp;</p>
+        <p class="schedule-title">MAKAN BERADAB</p>
+        <p class="schedule-time">1.30 PETANG</p>
+      </div>
+
+      <div class="schedule-item">
+        <p class="schedule-title">SESI FOTOGRAFI</p>
+        <p class="schedule-time">2.30 PETANG</p>
+      </div>
+
+      <div class="schedule-item">
+        <p class="schedule-title">MAJLIS BERSURAI</p>
+        <p class="schedule-time">4.00 PETANG</p>
+      </div>
+    </div>
+  </div>
+
+   <div class="fifth-section">
+     <div class="contact-vertical-text">Dihubungi</div>
+     
+     <div class="contact-container">
+       <div class="contact-group">
+         <h3 class="contact-group-title">WAKIL PEREMPUAN</h3>
+         <div class="contact-buttons">
+           <button class="contact-button" onclick="window.open('tel:019-2354911', '_blank')">
+             <span class="phone-icon"><i class="bi bi-telephone"></i></span>
+             <span>ZAINOL : 019 - 235 4911</span>
+           </button>
+           <button class="contact-button" onclick="window.open('tel:013-649 3416', '_blank')">
+             <span class="phone-icon"><i class="bi bi-telephone"></i></span>
+             <span>FATIN : 013 - 649 3416</span>
+           </button>
+         </div>
+       </div>
+
+       <div class="contact-group">
+         <h3 class="contact-group-title">WAKIL LELAKI</h3>
+         <div class="contact-buttons">
+           <button class="contact-button" onclick="window.open('tel:019-3219090', '_blank')">
+             <span class="phone-icon"><i class="bi bi-telephone"></i></span>
+             <span>AMIRUL : 019 - 321 9090</span>
+           </button>
+           <button class="contact-button" onclick="window.open('tel:011-28007396', '_blank')">
+             <span class="phone-icon"><i class="bi bi-telephone"></i></span>
+             <span>HAZIQ : 011 - 2800 7396</span>
+           </button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+  <div class="sixth-section" style="background: #545c4a url('Images/whiteround.png') center/cover no-repeat; padding: 60px 20px; min-height: 300px;">
+
+    <h1 class="countdown-title">Countdown</h1>
+    <div class="countdown-display">
+       <div class="countdown-item">
+         <span class="countdown-value" id="days">0</span>
+         <span class="countdown-label">DAYS</span>
+       </div>
+       <div class="countdown-separator">,</div>
+       <div class="countdown-item">
+         <span class="countdown-value" id="hours">0</span>
+         <span class="countdown-label">HOURS</span>
+       </div>
+       <div class="countdown-separator">,</div>
+       <div class="countdown-item">
+         <span class="countdown-value" id="minutes">0</span>
+         <span class="countdown-label">MINS</span>
+       </div>
+       <div class="countdown-separator">,</div>
+       <div class="countdown-item">
+         <span class="countdown-value" id="seconds">0</span>
+         <span class="countdown-label">SECS</span>
+       </div>
+     </div>
+   </div>
+
+   
+
+  <div class="eighth-section">
+
+  </div>
+
+  <div class="seventh-section">
+    <div class="doa-arabic">
+      <img src="Images/bismillah.png" alt="Bismillah">
+    </div>
+     
+     <div class="doa-content">
+       <p>YA ALLAH, JADIKANLAH</p>
+       <p>PERKAHWINAN MEREKA SEBAGAI</p>
+       <p>SEBAB UNTUK KEREDHAAN-MU</p>
+       <p>DAN SYURGA, SERTA</p>
+       <p>KURNIAKANLAH MEREKA</p>
+       <p>KESABARAN DAN KASIH SAYANG.</p>
+       
+       <p class="doa-spacing">JADIKANLAH PERKAHWINAN</p>
+       <p>MEREKA SEBAGAI PERKAHWINAN</p>
+       <p>YANG DIBERKATI, KEBAHAGIAAN</p>
+       <p>YANG KEKAL, DAN HUBUNGAN</p>
+       <p>YANG KUAT DI ANTARA MEREKA.</p>
+       
+       <p class="doa-amin">AMIN YA RABBAL ALAMIN</p>
+     </div>
+   </div>
+
+  <div class="footer">
+    <div class="arc-wrapper">
+      <svg class="arc-footer" viewBox="0 0 1200 420" preserveAspectRatio="none">
+        <defs>
+          <pattern id="texturePattern" patternUnits="userSpaceOnUse" width="200" height="200">
+            <rect width="200" height="200" fill="#f8f7f3"/>
+            <!-- <image href="https://www.transparenttextures.com/patterns/paper-fibers.png" x="0" y="0" width="200" height="200" opacity="1" style="mix-blend-mode: multiply;"/> -->
+          </pattern>
+        </defs>
+        <path d="M0 420 Q600 0 1200 420 V0 H0 Z" fill="url(#texturePattern)"/>
+      </svg>
+    </div>
+    <img src="Images/InvitationLetter.png" alt="Monogram" class="monogram-img-footer">
+    
+  </div>
+
+  <script src="js/invitation.js"></script>
+</body>
+</html>

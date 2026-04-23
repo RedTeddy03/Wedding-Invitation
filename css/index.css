@@ -1,0 +1,38 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../Images/whitebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.center-image {
+    max-width: 40%;
+    height: auto;
+    display: block;
+}
+p {
+    margin-top: 35px;
+    font-size: 1.1em;
+    color: #545c4a;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+    .center-image {
+        max-width: 80%;
+        height: auto;
+        display: block;
+    }
+  }

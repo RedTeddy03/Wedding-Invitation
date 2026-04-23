@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 0;
+            background: #545c4a;
+            /* background: black; */
+            color: white;
+            
+        }
+
+        .curvedbottom {
+            position: relative;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            /* height: 600px; */
+        }
+        .monogram-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 250px;
+            width: 60vw;
+            height: auto;
+            filter: drop-shadow(0 5px 24px rgba(49,61,47,0.12));
+            z-index: 2;
+        }
+
+        .curvedbottom svg {
+            position: relative;
+            display: block; 
+            width: calc(100% + 1.3px);
+            height: 350px;
+        }
+
+        .curvedbottom .shape-fill  {
+            fill: white;
+        }
+
+        .curvedtop .shape-fill  {
+            fill: white;
+        }
+
+        .curvedtop {
+            position: relative;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            margin-top: -2px;
+            height: 300px;
+        }
+        .curvedtop svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 300px;
+        }
+        .curvedtop .arabic {
+            position: absolute;
+            top: 1%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+            font-size: 2.2em;
+            font-family: 'Scheherazade', serif;
+            direction: rtl;
+            text-align: center;
+            color: white;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .ballet-font {
+            font-family: "Monsieur La Doulaise", cursive;
+            font-weight: 400;
+            font-size: 70px;
+            font-style: normal;
+            /* font-family: 'Dancing Script', cursive;
+            font-size: 2.2em;
+            letter-spacing: 0.04em;
+            color: #545c4a;
+            font-weight: 700;
+            font-size: 50px; */
+        }
+
+        .first-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 300px;
+            padding-bottom: 300px;
+            background: white;
+            color: #545c4a;
+        }
+
+        .second-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* padding-top: 300px; */
+            padding-bottom: 300px;
+            /* background: white;
+            color: #545c4a; */
+        }
+
+
+        
+        
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Amiri+Quran&family=Cinzel:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+
+        .fancy {
+            font-family: "Monsieur La Doulaise", cursive;
+            font-weight: 400;
+            font-size: 70px;
+            font-style: normal;
+            /* font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            letter-spacing: 1px; */
+  
+        }
+
+        .first-second {
+            padding-top: 50px;
+            padding-bottom: 100px;
+            font-size: 0.8em;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        }
+        .parents {
+            font-family: 'Cinzel', serif;
+        }
+        .parents p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .first-second p {
+            margin-top: 0;
+            margin-bottom: 0;
+            
+        }
+        .arabic {
+            font-family: 'Amiri Quran', serif;
+        }
+        .text {
+            /* font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal; */
+            margin-top: 0;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+        .dpn {
+            padding-top: 50px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 16px;
+            letter-spacing: 0px;
+        }
+        .male-groom h1{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .male-groom {
+            padding-top: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="curvedbottom">
+        <img src="Images/InvitationLetter.png" alt="Invitation Letter" class="monogram-image">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div class="first-section">
+        <p>W A L I M A T U L U R U S</p>
+        <P class="ballet-font">Amirul & Fatini</P>
+        <P>18 JULAI 2025, SABTU</P>
+    </div>
+    <div class="curvedtop" style="transform: rotate(180deg);">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+        </svg>
+        <p class="arabic" >السلام عليكم ورحمة الله وبركاته</p>
+    </div>
+    <div class="second-section">
+        <section class="first-second">
+            <p>DIJEMPUT UNTUK MENGHADIRI</p>
+            <p>MAJLIS PERKAHWINAN</p>
+        </section>
+
+        <H1 class="fancy" style="margin-bottom: 0;">Fatin Nur Fatini</H1>
+        <P class="text">anak perempuan kepada</P>
+        <section class="parents">
+            <p>ZAINOL ALAM BIN MOHAMED</p>
+            <P>NOORLIZA BINTI MOHAMAD</P>
+        </section>
+        
+        <P class="dpn">dengan pasangannya</P>
+
+        <section class="male-groom">
+            <h1 class="fancy">Mohd</h1>
+            <h1 class="fancy">Amirul Firdaus</h1>
+        </section>
+        <p class="text">anak lelaki kepada</p>
+        <section class="parents">
+            <P>MOHD AZLIN BIN YAHYA</P>
+            <P>MARSILAH BTE MD DIAH</P>
+        </section>
+        
+    </div>
+</body>
+</html>
